@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtensionReloaderPlugin = require('./lib/webpack-ext-reloader');
+//const ExtensionReloaderPlugin = require('webpack-ext-reloader')
 
 const mode = process.env.NODE_ENV || "development";
 const targetBrowser = process.env.TARGET_BROWSER || "chrome";
@@ -34,7 +35,7 @@ module.exports = {
         extensionPage: 'popup',
       },
       port: targetBrowser === 'chrome' ? 9090 : 9091,
-      reloadPage: false, // can also be true!
+      reloadPage: true,
       // Also possible to use
       // manifest: resolve(__dirname, "manifest.json")
     }),

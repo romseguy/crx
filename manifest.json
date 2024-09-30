@@ -19,5 +19,6 @@
       "js": ["content-script.bundle.js"],
       "css": ["style.css"]
     }
-  ]
+  ],
+  "permissions": ["storage"]
 }
